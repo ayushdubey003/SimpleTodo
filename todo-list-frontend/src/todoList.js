@@ -1,0 +1,7 @@
+import web3 from "./web3";
+
+const address = "0xB0f18a36adBc3AfB73E4F2176F2BBCD6026e4D5f";
+const abi = [{"inputs":[{"internalType":"string","name":"desc","type":"string"}],"name":"addTodo","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"ind","type":"uint256"}],"name":"completeTodo","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"getLength","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"ind","type":"uint256"}],"name":"removeTodo","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"},{"internalType":"uint256","name":"","type":"uint256"}],"name":"todos","outputs":[{"internalType":"string","name":"description","type":"string"},{"internalType":"bool","name":"completed","type":"bool"},{"internalType":"bool","name":"removed","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"ind","type":"uint256"}],"name":"uncompleteTodo","outputs":[],"stateMutability":"nonpayable","type":"function"}];
+const todoList = new web3.eth.Contract(abi,address);
+
+export default todoList;
